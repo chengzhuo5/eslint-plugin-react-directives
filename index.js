@@ -9,11 +9,11 @@ module.exports = {
         ecmaVersion: 6
       },
       plugins: [
-        'react-directives'
+        '@minar-kotonoha/eslint-plugin-react-directives'
       ],
       rules: {
-        'react-directives/no-undef': 'error',
-        'react-directives/no-unused-vars': 'error'
+        '@minar-kotonoha/eslint-plugin-react-directives/no-undef': 'error',
+        '@minar-kotonoha/eslint-plugin-react-directives/no-unused-vars': 'error'
       }
     }
   }

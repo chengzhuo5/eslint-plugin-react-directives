@@ -12,7 +12,7 @@ new RuleTester({
       code: `
         export default () => {
           const [data, setData] = useState(0);
-          return <input x-model-hook={data.foo}/>
+          return <input v-model-hook={data.foo}/>
         }
       `
     },
@@ -20,7 +20,7 @@ new RuleTester({
       code: `
         export default () => {
           const [data, setData] = React.useState(0);
-          return <input x-model-hook={data}/>
+          return <input v-model-hook={data}/>
         }
       `
     },
@@ -28,7 +28,7 @@ new RuleTester({
       code: `
         export default () => {
           const [data, setData] = React['useState'](0);
-          return <input x-model-hook={data}/>
+          return <input v-model-hook={data}/>
         }
       `
     },
@@ -36,7 +36,7 @@ new RuleTester({
       code: `
         export default () => {
           const [data, setData] = useState(0);
-          return <input x-model-hook={data}/>
+          return <input v-model-hook={data}/>
         }
       `
     },
@@ -47,7 +47,7 @@ new RuleTester({
             0: data,
             1: setState
           } = useState(0);
-          return <input x-model-hook={data}/>
+          return <input v-model-hook={data}/>
         }
       `
     },
@@ -55,12 +55,12 @@ new RuleTester({
       code: `
         export default () => {
           const [data, setData] = useState(0);
-          return <input v-model-hook={data}/>
+          return <input x-model-hook={data}/>
         }
       `,
       settings: {
-        'react-directives': {
-          prefix: 'v'
+        '@minar-kotonoha/eslint-plugin-react-directives': {
+          prefix: 'x'
         }
       }
     },
@@ -68,11 +68,11 @@ new RuleTester({
       code: `
         export default () => {
           const [data, setData] = Preact.useState(0);
-          return <input x-model-hook={data}/>
+          return <input v-model-hook={data}/>
         }
       `,
       settings: {
-        'react-directives': {
+        '@minar-kotonoha/eslint-plugin-react-directives': {
           pragmaType: 'Preact'
         }
       }
@@ -81,7 +81,7 @@ new RuleTester({
       code: `
         export default () => {
           const data = useState(0);
-          return <input x-model-hook={data}/>
+          return <input v-model-hook={data}/>
         }
       `
     }
@@ -100,7 +100,7 @@ new RuleTester({
       code: `
         export default () => {
           const [data, setData] = Foo.useState(0);
-          return <input x-model-hook={data}/>
+          return <input v-model-hook={data}/>
         }
       `,
       errors: [
@@ -111,7 +111,7 @@ new RuleTester({
       code: `
         export default () => {
           const [data, setData] = useState(0);
-          return <input x-abc={data}/>
+          return <input v-abc={data}/>
         }
       `,
       errors: [

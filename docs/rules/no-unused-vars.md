@@ -4,21 +4,21 @@ This rule is almost the same as [`no-unused-vars`](https://eslint.org/docs/rules
 
 ## Rule Details
 
-Ignore some unused variables when using the [`x-model`](https://github.com/peakchen90/babel-plugin-react-directives#x-model)
+Ignore some unused variables when using the [`v-model-class`](https://github.com/peakchen90/babel-plugin-react-directives#x-model)
 
 ## Examples of **correct** code for this rule:
 
 ```jsx harmony
 function Foo() {
-  const [data, setData] = useState(0)
-  return <input x-model-hook={data}/>
+  const [data, setData] = useState(0);
+  return <input v-model-hook={data} />;
 }
 ```
 
 ```jsx harmony
 function Foo() {
-  const [data, setData] = React.useState(0)
-  return <input x-model-hook={data}/>
+  const [data, setData] = React.useState(0);
+  return <input v-model-hook={data} />;
 }
 ```
 
@@ -26,20 +26,20 @@ function Foo() {
 
 ```jsx harmony
 function Foo() {
-  const [data, setData] = useState(0)
-  return <input foo={data}/>
+  const [data, setData] = useState(0);
+  return <input foo={data} />;
 }
 ```
 
 ```jsx harmony
 function Foo() {
-  const [data, setData] = Foo.useState(0)
-  return <input x-model-hook={data}/>
+  const [data, setData] = Foo.useState(0);
+  return <input v-model-hook={data} />;
 }
 ```
 
 ```jsx harmony
 function Foo() {
-  const [data, setData] = useState(0)
+  const [data, setData] = useState(0);
 }
 ```

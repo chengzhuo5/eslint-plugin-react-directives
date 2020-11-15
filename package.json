@@ -1,6 +1,6 @@
 {
-  "name": "eslint-plugin-react-directives",
-  "version": "1.0.1",
+  "name": "@minar-kotonoha/eslint-plugin-react-directives",
+  "version": "1.0.2",
   "description": "some rules for babel-plugin-react-directives.",
   "keywords": [
     "eslint",
@@ -9,7 +9,7 @@
     "directive",
     "react-directives"
   ],
-  "author": "peakchen90 <1558267774@qq.com>",
+  "author": "chengzhuo5",
   "main": "index.js",
   "files": [
     "lib",
@@ -24,10 +24,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/peakchen90/eslint-plugin-react-directives"
+    "url": "https://github.com/chengzhuo5/eslint-plugin-react-directives"
   },
-  "homepage": "https://github.com/peakchen90/eslint-plugin-react-directives",
-  "bugs": "https://github.com/peakchen90/eslint-plugin-react-directives/issues",
+  "homepage": "https://github.com/chengzhuo5/eslint-plugin-react-directives",
+  "bugs": "https://github.com/chengzhuo5/eslint-plugin-react-directives/issues",
   "peerDependencies": {
     "eslint": ">=5.0.0"
   },

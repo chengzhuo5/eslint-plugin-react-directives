@@ -13,11 +13,11 @@ function Foo() {
   const list = [1, 2, 3];
   return (
     <ul>
-      <li x-for={(item, index) in list} key={item}>
+      <li v-for={(item, index) in list} key={item}>
         <span>{item}</span>
       </li>
     </ul>
-  )
+  );
 }
 ```
 
@@ -28,9 +28,9 @@ function Foo() {
   const list = [1, 2, 3];
   return (
     <ul>
-      <li x-for={(item, index) in list}></li>
+      <li v-for={(item, index) in list}></li>
       {item}
     </ul>
-  )
+  );
 }
 ```

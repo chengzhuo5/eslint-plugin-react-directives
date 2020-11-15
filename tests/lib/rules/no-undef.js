@@ -11,27 +11,27 @@ new RuleTester({
     {
       code: `
         const list = [1, 2, 3]
-        const foo = <li x-for={(item, index) in list} key={item.id}>{item}</li>  
+        const foo = <li v-for={(item, index) in list} key={item.id}>{item}</li>
       `
     },
     {
       code: `
         const foo = (
-          <li x-for={(item, index) in [1, 2, 3]} key={item.id}>
+          <li v-for={(item, index) in [1, 2, 3]} key={item.id}>
             <span>{item}</span>
-          </li> 
-        ) 
+          </li>
+        )
       `
     },
     {
       code: `
         const foo = (
-          <li v-for={(item, index) in [1, 2, 3]} key={item.id}>{item}</li> 
-        ) 
+          <li x-for={(item, index) in [1, 2, 3]} key={item.id}>{item}</li>
+        )
       `,
       settings: {
-        'react-directives': {
-          prefix: 'v'
+        '@minar-kotonoha/eslint-plugin-react-directives': {
+          prefix: 'x'
         }
       }
     },
@@ -40,8 +40,8 @@ new RuleTester({
     {
       code: `
         const foo = (
-          <li foo={(item) in [1, 2, 3]} key={item.id}>{item}</li> 
-        ) 
+          <li foo={(item) in [1, 2, 3]} key={item.id}>{item}</li>
+        )
       `,
       errors: [
         { message: /'item' is not defined/ },
@@ -52,7 +52,7 @@ new RuleTester({
     {
       code: `
         const foo = (
-          <li x-for={item in [1, 2, 3]} key={item.id}>{item}</li> 
+          <li v-for={item in [1, 2, 3]} key={item.id}>{item}</li>
         )
         item
       `,
@@ -64,8 +64,8 @@ new RuleTester({
       code: `
         const foo = (
           <div>
-            <li x-for={item in [1, 2, 3]} key={item.id}>{item}</li>
-            {item} 
+            <li v-for={item in [1, 2, 3]} key={item.id}>{item}</li>
+            {item}
           </div>
         )
       `,
