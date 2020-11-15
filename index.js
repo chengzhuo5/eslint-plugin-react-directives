@@ -12,8 +12,8 @@ module.exports = {
         '@minar-kotonoha/eslint-plugin-react-directives'
       ],
       rules: {
-        '@minar-kotonoha/eslint-plugin-react-directives/no-undef': 'error',
-        '@minar-kotonoha/eslint-plugin-react-directives/no-unused-vars': 'error'
+        '@minar-kotonoha/react-directives/no-undef': 'error',
+        '@minar-kotonoha/react-directives/no-unused-vars': 'error'
       }
     }
   }
